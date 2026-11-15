@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dicionário de dados do Sistema de Gestão Operacional e Vendas da Adega do Rima.">
+  <meta name="author" content="Rafael Christian de Araujo Costa">
+  <title>DataBase Atlas | Dicionário de Dados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="btn-menu" class="btn btn-menu" type="button" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="brand" href="#" aria-label="DataBase Atlas - início">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">DATA<span>BASE</span><small>ATLAS · DOCUMENTAÇÃO</small></span>
+    </a>
+    <div class="titulo">
+      <h1>Dicionário de Dados</h1>
+      <p>Sistema de Gestão Operacional e Vendas · Adega do Rima</p>
+    </div>
+    <div class="top-actions">
+      <span class="status-pill"><i></i> Projeto acadêmico</span>
+      <button id="btn-tema" class="btn theme-btn" type="button" aria-pressed="false">☾ <span>Modo escuro</span></button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="Navegação por tabelas">
+      <div class="side-intro">
+        <span class="side-kicker">NAVEGAÇÃO</span>
+        <h2>Estrutura do banco</h2>
+        <p>Selecione uma entidade para consultar seus campos e regras.</p>
+      </div>
+      <div class="side-label">ENTIDADES</div>
+      <ul id="nav-list"></ul>
+      <div class="side-footer">
+        <span class="side-footer-mark">RC</span>
+        <div><strong>Rafael Christian</strong><small>Publicação individual</small></div>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> DATA DICTIONARY / 2026</span>
+          <h2>Conheça a estrutura<br>por trás dos <em>dados.</em></h2>
+          <p>Documentação técnica das entidades, atributos, restrições, privacidade e permissões do sistema.</p>
+          <div class="hero-tags"><span>MYSQL 8.4 LTS</span><span>INNODB</span><span>UTF8MB4</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-core"><span>DB</span><small>ATLAS</small></div>
+          <span class="art-node node-a">01</span><span class="art-node node-b">20</span><span class="art-node node-c">SQL</span>
+        </div>
+      </section>
+
+      <section class="overview">
+        <div class="overview-heading">
+          <div><span class="section-kicker">VISÃO GERAL</span><h2>Sobre o projeto</h2></div>
+          <span class="version-tag">VERSÃO INDIVIDUAL</span>
+        </div>
+        <div class="overview-grid">
+          <article class="info-card info-main">
+            <span class="card-icon">⌘</span>
+            <h3>Escopo do sistema</h3>
+            <p>Banco de dados relacional da Adega do Rima, varejo de bebidas com loja física única. Cobre cadastro de clientes, catálogo de produtos, pedidos e pagamentos, estoque por lote com controle de validade, cancelamento e estorno, auditoria e atendimento aos direitos do titular da LGPD. Não emite documento fiscal eletrônico nem integra marketplaces, gateways de pagamento ou ERP.</p>
+          </article>
+          <article class="info-card">
+            <span class="card-icon">▤</span>
+            <h3>Tecnologia</h3>
+            <p>MySQL 8.4 LTS<br>Engine InnoDB<br>Charset utf8mb4<br>Collation utf8mb4_0900_ai_ci</p>
+          </article>
+          <article class="info-card author-card">
+            <span class="card-icon">✳</span>
+            <h3>Publicação individual</h3>
+            <p><strong>Rafael Christian de Araujo Costa</strong><br>RGM 47926597<br>Análise e Desenvolvimento de Sistemas · UNICID</p>
+          </article>
+        </div>
+        <details class="team-details">
+          <summary>Créditos e composição do Grupo 3</summary>
+          <ul class="responsaveis">
+            <li><strong>Gabriel Anjos Albuquerque</strong> (RGM 48037931): líder do grupo e Data Owner, responsável pelas regras de negócio e pela aprovação do dicionário.</li>
+            <li><strong>Rafael Christian de Araujo Costa</strong> (RGM 47926597): analista de requisitos e Data Steward, responsável pelos requisitos e pela qualidade das regras.</li>
+            <li><strong>Luan Henrique Ribeiro de Albuquerque</strong> (RGM 47914564): Data Steward, modelagem de dados.</li>
+            <li><strong>Thiago Nielsen dos Santos</strong> (RGM 47917041): Data Steward, modelagem de dados.</li>
+            <li><strong>Arthur Costa de Paula</strong> (RGM 48108014): Data Steward, modelagem de dados.</li>
+            <li><strong>Mateus Izac Batista</strong> (RGM 47917857): Data Steward, modelagem de dados.</li>
+            <li><strong>Ana Julia de Aquino Silva</strong> (RGM 47784105): Data Steward, modelagem de dados.</li>
+          </ul>
+          <p class="orientador">Professor orientador: Prof. Diego Marques de Carvalho · UNICID, Tatuapé.</p>
+        </details>
+      </section>
+
+      <section class="workspace" aria-label="Explorador do dicionário de dados">
+        <div class="workspace-head">
+          <div><span class="section-kicker">EXPLORADOR DE DADOS</span><h2>Catálogo de entidades</h2><p>Consulte tabelas, colunas e metadados do banco.</p></div>
+          <div class="workspace-actions">
+            <a class="btn btn-primary" href="docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf" download>↓ <span>Especificação PDF</span></a>
+            <button id="btn-der" class="btn btn-outline" type="button">⌗ <span>Visualizar DER</span></button>
+          </div>
+        </div>
+        <div class="search-panel">
+          <div class="search-label"><label for="busca">Pesquisar no dicionário</label><span>BUSCA POR TABELA OU COLUNA</span></div>
+          <div class="search-wrap"><span class="search-icon">⌕</span><input id="busca" type="search" placeholder="Ex.: cliente, data_validade, id_pedido..." autocomplete="off"><kbd>⌕</kbd></div>
+          <p id="contagem" role="status" aria-live="polite"></p>
+        </div>
+        <ul class="legenda" aria-label="Legenda de privacidade">
+          <li><span class="badge badge-dps">[DPS]</span> Dado Pessoal Sensível</li>
+          <li><span class="badge badge-dp">[DP]</span> Dado Pessoal</li>
+          <li><span class="badge badge-na">[N/A]</span> Não Aplicável</li>
+        </ul>
+      </section>
+
+      <p id="vazio" hidden>Nenhuma tabela ou coluna corresponde à busca. Apague o texto para ver todas.</p>
+      <div id="dicionario"></div>
+      <footer class="page-footer"><span>DATABASE ATLAS</span><span>Documentação de banco de dados · Rafael Christian · 2026</span></footer>
+    </main>
+  </div>
+
+  <div id="modal-der" class="modal" role="dialog" aria-modal="true" aria-label="Diagrama Entidade-Relacionamento" hidden>
+    <div class="modal-head"><div><span class="section-kicker">MODELO RELACIONAL</span><h2>Diagrama Entidade-Relacionamento</h2></div>
+      <div class="modal-barra">
+        <button id="der-mais" class="btn" type="button" aria-label="Aumentar zoom">＋ Zoom</button>
+        <button id="der-menos" class="btn" type="button" aria-label="Diminuir zoom">－ Zoom</button>
+        <button id="der-reset" class="btn" type="button">Resetar</button>
+        <button id="der-fechar" class="btn btn-primary" type="button">Fechar ✕</button>
+      </div>
+    </div>
+    <div id="der-cena" class="der-cena">
+      <img id="der-img" src="assets/der.png" alt="Diagrama Entidade-Relacionamento do banco da Adega do Rima" draggable="false">
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
